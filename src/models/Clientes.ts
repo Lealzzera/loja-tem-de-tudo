@@ -1,7 +1,7 @@
 import { Model, DataTypes } from "sequelize";
 import { sequelize } from '../instances/pg';
 
-export interface VendasInstace extends Model {
+export interface ClientesInstance extends Model {
   id: number;
   nome: string;
   endereco: string;
@@ -9,7 +9,7 @@ export interface VendasInstace extends Model {
   telefone: number;
 }
 
-export const Produto = sequelize.define<VendasInstace>('Produtos', {
+export const Clientes = sequelize.define<ClientesInstance>('Clientes', {
   id: {
     primaryKey: true,
     autoIncrement: true,
@@ -26,7 +26,7 @@ export const Produto = sequelize.define<VendasInstace>('Produtos', {
   },
   telefone: {
     type: DataTypes.NUMBER
-  },
+  }
 }, {
   tableName: 'clientes',
   timestamps: false
