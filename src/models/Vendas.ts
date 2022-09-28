@@ -10,7 +10,7 @@ export interface VendasInstace extends Model {
   vendedor: string;
 }
 
-export const Produto = sequelize.define<VendasInstace>('Produtos', {
+export const Vendas = sequelize.define<VendasInstace>('Vendas', {
   id: {
     primaryKey: true,
     autoIncrement: true,
